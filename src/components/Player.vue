@@ -1,14 +1,32 @@
 <template>
   <button>
         {{ name }}
-        {{ role }}
+        <div>
+          <p v-if="this.role === 'Citizen'">
+            <Citizen></Citizen>
+          </p>
+          <p v-else-if="role === 'Werewolf'">
+            人狼
+          </p>
+          <p v-else-if="role === 'FortuneTeller'">
+            占い師
+          </p>
+          <p v-else>
+            役職を決めてください
+          </p>
+        </div>
         {{ status }}
   </button>
 </template>
 
 <script>
+import Citizen from "./Roles/Citizen";
+
 export default {
     name: "Player",
+    components: {
+      Citizen
+    },
     props: {
         id: String,
         name: String,

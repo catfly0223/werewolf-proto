@@ -22,17 +22,17 @@ export default {
         {
           id: "1",
           name: "Taro",
-          role: "人狼"
+          role: ""
         },
         {
           id: "2",
           name: "Jiro",
-          role: "市民"
+          role: ""
         },
         {
           id: "3",
           name: "Saburo",
-          role: "騎士"
+          role: ""
         }
       ]
     }
@@ -51,13 +51,13 @@ export default {
 
 function getRandomRole() {
   var roles = [
-    { value: "Citizen", text: "市民" },
-    { value: "Warewolf", text: "人狼" },
-    { value: "FortuneTeller", text: "占い師" },
+    "Citizen",
+    "Werewolf",
+    "FortuneTeller"
   ]
   var index = Math.floor(Math.random() * roles.length)
 
-  return roles[index].text;
+  return roles[index];
 }
 </script>
 
