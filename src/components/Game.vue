@@ -51,9 +51,7 @@ export default {
 
 function getRandomRole() {
   var roles = [
-    "Citizen",
-    "Werewolf",
-    "FortuneTeller"
+    "Citizen"
   ]
   var index = Math.floor(Math.random() * roles.length)
 
